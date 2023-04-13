@@ -87,4 +87,92 @@ select * from cust where ename not in ('amit','sujit');
 select ename||'__hehe__'||prof from cust;
 
 
-;
+--logical operator
+
+--and or not
+
+select * from cust where bonus=50 and salary =5000;
+
+select * from cust where salary is null or bonus=60;
+
+select * from cust where bonus !=50;
+
+
+--like
+
+select * from cust where ename like '%ish';
+
+select * from cust where ename like '_m%';
+
+--constraints
+--primary key 
+--unique 
+--not null
+--unique
+--default
+
+--agreegate function
+--min max sum count
+select max(salary) from cust;
+select max(bonus) from cust;
+select min(bonus) from cust;
+
+select count(bonus) from cust;
+select count(*) from cust;
+
+select * from cust;
+
+select distinct(bonus) from cust;
+
+select count(distinct(bonus)) from cust;
+
+select count (bonus) from cust;
+select count (*) from cust;
+
+
+
+--scalar functions
+--
+--initcap
+--lower 
+--upper
+--length
+--substr
+
+select upper('manish') from dual;
+select lower('manish') from dual;
+select substr('manish',1,4) from dual;
+select initcap('manish') from dual;
+select length('manish') from dual;
+select instr('manish','i',1,1) from dual;
+
+select instr('manishisis','i',-1,1) from dual;
+
+--dual is virtual table
+
+--Date Function 
+
+--next_day
+--last_day
+--sysdate
+--systimestamp
+--to_date
+
+select sysdate from dual;
+
+select to_date('2020-12-04','yyyy-dd-mm') from dual;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
